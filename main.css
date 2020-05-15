@@ -76,6 +76,7 @@ li {
 .nav-link:focus {
     background: linear-gradient(to top, #ffe838, #fd57bf);
     -webkit-background-clip:text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -89,7 +90,7 @@ li {
     top: 5rem;
     right: 5rem;
     width: 5rem;
-    height: 5rem;
+    height: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -125,6 +126,7 @@ li {
 .bar.end {
     align-self: flex-end;
     transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 
 .open .bar.end {
