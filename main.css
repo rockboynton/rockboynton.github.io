@@ -483,6 +483,7 @@ input[type="submit"]:hover {
     right: 5rem;
     border-radius: 100%;
     display: flex;
+    animation: pulse 2s infinite;
 }
 
 .up i {
@@ -497,6 +498,17 @@ input[type="submit"]:hover {
 /*End footer*/
 
 /*Start animations*/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, .99);
+    }
+    70% {
+        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    }
+}
 /*End animations*/
 
 /*Start media queries*/
