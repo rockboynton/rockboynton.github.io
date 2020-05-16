@@ -429,6 +429,34 @@ li {
     width: 1.5rem;
     background-color: #313534;
 }
+
+.timeline .date ul {
+    border-left: none;
+    border-radius: none;
+    background-color: none;
+    margin: 0 2rem;
+    position: relative;
+    padding: 0 0;
+    text-align: left;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 300;
+    list-style: circle;
+}
+
+.timeline .date li {
+    border-left: none;
+    border-radius: none;
+    background-color: none;
+    margin: 1rem 0;
+    position: relative;
+    padding: 0 0;
+    text-align: left;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 300;
+    list-style: circle;
+}
 /*End timeline*/
 
 /*Start contact*/
