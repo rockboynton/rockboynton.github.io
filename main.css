@@ -7,7 +7,7 @@
 
 html {
     font-size: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     color: #eee;
     background: url("images/sitebg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -268,16 +268,16 @@ li {
     transition: color 300ms;
 }
 
-.fa-facebook-square:hover {
-    color: #4267b2;
+.fa-linkedin:hover {
+    color: #0e76a8;
 }
 
-.fa-twitter-square:hover {
-    color: #38a1f3;
+.fa-github-square:hover {
+    color: #211F1F;
 }
 
-.fa-dribbble-square:hover {
-    color: #ea4c89;
+.fa-envelope-square:hover {
+    color: #004f9f;
 }
 /*End about*/
 
@@ -346,6 +346,12 @@ li {
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
+}
+
+.portfolio-description h2 {
+    font-size: 2.5rem;
+    position: relative;
+    margin-bottom: 1rem;
 }
 
 .portfolio-description h6 {
