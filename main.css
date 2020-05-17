@@ -385,7 +385,7 @@ li {
     margin: auto;
   }
   
-  Hide the images by default
+  /*Hide the images by default*/
   .mySlides {
     display: none;
   }
