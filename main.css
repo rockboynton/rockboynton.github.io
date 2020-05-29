@@ -54,8 +54,8 @@ img {
 }
 
 .section-heading {
-    text-align: center;
     margin-bottom: 10rem;
+    text-align: center;
 }
 
 .section-heading h1 {
@@ -355,7 +355,6 @@ li {
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
-    text-align: center;
 }
 
 .portfolio-description h2 {
@@ -811,6 +810,10 @@ input[type="submit"]:hover {
     .portfolio-description {
         margin: 0;
         order: 2;
+    }
+
+    .portfolio-description h1 {
+        text-align: center;
     }
 
     .timeline p {
