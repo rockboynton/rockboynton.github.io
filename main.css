@@ -642,6 +642,7 @@ input[type="submit"]:hover {
 }
 /*End animations*/
 
+
 /*Start media queries*/
 @media screen and (max-width: 1600px) {
     
@@ -650,10 +651,7 @@ input[type="submit"]:hover {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-    }
+@media screen and (max-width: 830px) {
     
     .top-nav {
         width: 100%;
@@ -664,7 +662,7 @@ input[type="submit"]:hover {
         background-color: #16162d;
         border-bottom-right-radius: 100%;
         border-bottom-left-radius: 100%;
-        transition: all 650ms cubic-bezier(1, 0, 0, 1)
+        transition: all 650ms cubic-bezier(1, 0, 0, 1);
     }
     
     .top-nav.open {
@@ -684,6 +682,7 @@ input[type="submit"]:hover {
         cursor: pointer;
         z-index: 1500;
         transition: transform 650ms ease-out;
+        position: fixed;
     }
     
     .menu-toggler.open {
@@ -719,7 +718,7 @@ input[type="submit"]:hover {
     .open .bar.end {
         transform: rotate(-450deg) translateX(-.8rem);
     }
-
+    
     body {
         background: url("images/sitebg2.jpg") no-repeat center fixed;
     }
@@ -727,27 +726,27 @@ input[type="submit"]:hover {
     .landing-text h1 {
         font-size: 15rem;
     }
-
+    
     .landing-text h6 {
         font-size: 1.7rem;
     }
-
-    .nav-list {
+    
+    /* .nav-list {
         flex-direction: column;
-    }
-
+    } */
+    
     li {
         margin: 2rem 0;
     }
-
+    
     .nav-link {
         font-size: 4.5rem;
     }
-
+    
     .about-heading h1 {
         font-size: 8rem;
     }
-
+    
     .about img {
         /* margin: 0 0 7rem 0; */
         height: 350px;
@@ -756,61 +755,65 @@ input[type="submit"]:hover {
     .section-heading h1 {
         font-size: 3rem;
     }
-
+    
     .about-details .nav-list {
         flex-direction: initial;
     }
-
+    
     .about-details li {
         margin: 0 2rem;
     }
-
+    
     .icon-container {
         width: 7rem;
         height: 7rem;
     }
-
+    
     .icon-container i {
         font-size: 4rem;
     }
-
+    
     .timeline ul {
         margin: 0 0 0 auto;
-
+        
     }
-
+    
     .timeline .date::before {
         left: -20rem;
     }
-
+    
     .timeline .date::after {
         left: -5.9rem;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) and (orientation:portrait){
 
+    .nav-list {
+        flex-direction: column;
+    }
+    
     .menu-toggler {
         top: 1rem;
         right: 2rem;
     }
-
+    
     .landing-text h1 {
         font-size: 8rem;
     }
-
+    
     .landing-text h6 {
         font-size: 1.4rem;
     }
-
+    
     .nav-link {
         font-size: 3.5rem;
     }
-
+    
     .about .container {
         flex-direction: column;
     }
-
+    
     .profile-img {
         margin: 0 0 7rem 0;
     }
@@ -819,48 +822,66 @@ input[type="submit"]:hover {
         margin-right: 0;
         margin-bottom: 5rem;
     }
-
+    
     .about img {
         /* margin: 0 0 7rem 0; */
         height: 300px;
     }
-
+    
     .portfolio-item {
         flex-direction: column;
     }
-
+    
     .portfolio-img {
         margin: 0 0 2rem 0;
         order: 1;
     }
-
+    
     .portfolio-description {
         margin: 0;
         order: 2;
     }
-
+    
     .portfolio-description .cta {
         margin-top: 0;
     }
-
+    
     .portfolio-description h1 {
         text-align: center;
     }
-
+    
     .timeline p {
         font-size: 1.5rem;
     }
-
+    
     .timeline .date::before {
         font-size: 1.4rem;
     }
-
+    
     form {
         width: 100%;
     }
-
+    
     .up {
         right: 2rem;
+    }
+}
+
+@media screen and (max-height: 414px){
+    .about-details .nav-list {
+        flex-direction:row;
+    }
+
+    .landing-text h1 {
+        font-size: 12rem;
+    }
+
+    .landing-text h6 {
+        font-size: 1.4rem;
+    }
+
+    .nav-link {
+        font-size: 2.25rem;
     }
 }
 /*End media queries*/
