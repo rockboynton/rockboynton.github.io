@@ -35,9 +35,6 @@
                     <a href="#experience" class="nav-link">Experience</a>
                 </li>
                 <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li>
                     <a href="Rock Boynton - Resume 4-9-20.pdf" class="nav-link">Resume</a>
                 </li>
             </ul>
@@ -190,7 +187,7 @@
                         <li>
                             Built custom hardware with <b>VHDL</b> and Qsys including
                             4 wire SPI component controlling a 10 bit ADXL345
-                            accelerometer  chip and an I2C Master component to
+                            accelerometer chip and an I2C Master component to
                             control an OV7670 camera; developed respective
                             drivers.
                         </li>
@@ -293,85 +290,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-heading">
-                <h1>Contact</h1>
-                <h6>Let's work together</h6>
-            </div>
-            <form action="" data-aos="fade-up" data-aos-delay="200">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address..." required>
-                <label for="service">Services:</label>
-                <select name="services" id="service">
-                    <option value="">Embedded Software Engineering</option>
-                    <option value="">Software Development</option>
-                    <option value="">UX Research/Design</option>
-                </select>
-                <label for="subject">Subject:</label>
-                <textarea name="subject" id="subject" cols="10" rows="10"></textarea>
-                <input type="submit" value="Submit">
-            </form>
-            <form method="post" name="contact_form"
-action="contact-form-handler.php">
-    Your Name:
-    <input type="text" name="name">
-
-    Email Address:
-    <input type="text" name="email">
-
-    Message:
-    <textarea name="message"></textarea>
-
-    <input type="submit" value="Submit">
-</form>	
-
-<script language="JavaScript">
-    var frmvalidator  = new Validator("contactform");
-    frmvalidator.addValidation("name","req","Please provide your name");
-    frmvalidator.addValidation("email","req","Please provide your email");
-    frmvalidator.addValidation("email","email",
-      "Please enter a valid email address");
-    </script>
-
-<?php
-$errors = '';
-$myemail = 'rock.boynton@yahoo.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  ||
-   empty($_POST['email']) ||
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
-}
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
-
-if( empty($errors))
-{
-$to = $myemail;
-$email_subject = "Contact form submission: $name";
-$email_body = "You have received a new message. ".
-" Here are the details:\n Name: $name \n ".
-"Email: $email_address\n Message \n $message";
-$headers = "From: $myemail\n";
-$headers .= "Reply-To: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-//redirect to the 'thank you' page
-header('Location: contact-form-thank-you.html');
-}
-?>
         </div>
     </section>
 
