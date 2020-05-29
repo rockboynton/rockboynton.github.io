@@ -355,6 +355,7 @@ li {
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
+    text-align: center;
 }
 
 .portfolio-description h2 {
@@ -722,6 +723,11 @@ input[type="submit"]:hover {
         font-size: 8rem;
     }
 
+    .about img {
+        /* margin: 0 0 7rem 0; */
+        height: 350px;
+    }
+
     .section-heading h1 {
         font-size: 3rem;
     }
@@ -781,6 +787,16 @@ input[type="submit"]:hover {
 
     .profile-img {
         margin: 0 0 7rem 0;
+    }
+
+    .slideshow-container {
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    .about img {
+        /* margin: 0 0 7rem 0; */
+        height: 300px;
     }
 
     .portfolio-item {
