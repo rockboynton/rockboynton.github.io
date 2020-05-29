@@ -18,6 +18,7 @@ html {
 }
 
 body {
+    padding-top: 50px;
     width: 100%;
     height: 100%;
     background: url("images/sitebg.jpg") no-repeat center fixed;
@@ -109,14 +110,17 @@ header {
 
 .top-nav {
     width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: -100vh;
+    height: 50px;
     z-index: 50;
-    background-color: #16162d;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
-    transition: all 650ms cubic-bezier(1, 0, 0, 1)
+    background-color: rgba(7, 0, 22, 0.8);
+    backdrop-filter: saturate(180%) blur(15px);
+    position: fixed;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+}
+
+.nav-up {
+    top: -50px;
 }
 
 .nav-list {
@@ -134,7 +138,7 @@ li {
 
 .nav-link {
     font-family: 'Fira code', consolas;
-    font-size: 5rem;
+    font-size: 2rem;
     padding: 1rem;
 }
 
@@ -146,58 +150,7 @@ li {
     -webkit-text-fill-color: transparent;
 }
 
-.top-nav.open {
-    top: 0;
-    border-radius: initial;
-}
 
-.menu-toggler {
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    width: 5rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1500;
-    transition: transform 650ms ease-out;
-}
-
-.menu-toggler.open {
-    transform: rotate(-45deg);
-}
-
-.bar {
-    background: linear-gradient(to right, #ffe838, #fd57bf);
-    width: 100%;
-    height: 4px;
-    border-radius: .8rem;
-}
-
-.bar.half {
-    width: 50%;
-}
-
-.bar.start {
-    transform-origin: right;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.start {
-    transform: rotate(-450deg) translateX(.8rem);
-}
-
-.bar.end {
-    align-self: flex-end;
-    transform-origin: left;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.end {
-    transform: rotate(-450deg) translateX(-.8rem);
-}
 
 .landing-text {
     position: absolute;
@@ -691,20 +644,86 @@ input[type="submit"]:hover {
 
 /*Start media queries*/
 @media screen and (max-width: 1600px) {
-    .nav-list {
-        flex-direction: column;
-    }
-
+    
     .about-details .nav-list {
         flex-direction: initial;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    
+    .top-nav {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: -100vh;
+        z-index: 50;
+        background-color: #16162d;
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+        transition: all 650ms cubic-bezier(1, 0, 0, 1)
+    }
+    
+    .top-nav.open {
+        top: 0;
+        border-radius: initial;
+    }
+    
+    .menu-toggler {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        width: 4rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 1500;
+        transition: transform 650ms ease-out;
+    }
+    
+    .menu-toggler.open {
+        transform: rotate(-45deg);
+    }
+    
+    .bar {
+        background: linear-gradient(to right, #ffe838, #fd57bf);
+        width: 100%;
+        height: 3px;
+        border-radius: 0.7rem;
+    }
+    
+    .bar.half {
+        width: 50%;
+    }
+    
+    .bar.start {
+        transform-origin: right;
+        transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    }
+    
+    .open .bar.start {
+        transform: rotate(-450deg) translateX(.8rem);
+    }
+    
+    .bar.end {
+        align-self: flex-end;
+        transform-origin: left;
+        transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    }
+    
+    .open .bar.end {
+        transform: rotate(-450deg) translateX(-.8rem);
+    }
+
     body {
         background: url("images/sitebg2.jpg") no-repeat center fixed;
     }
-
+    
     .landing-text h1 {
         font-size: 15rem;
     }
@@ -770,8 +789,9 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 600px) {
+
     .menu-toggler {
-        top: 2rem;
+        top: 1rem;
         right: 2rem;
     }
 
