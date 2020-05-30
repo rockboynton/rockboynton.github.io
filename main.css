@@ -43,7 +43,7 @@ p {
 img {
     width: 100%;
     border: 3px solid #ffe838;
-    filter: drop-shadow(0 0 1rem #fd57bf);
+    filter: drop-shadow(0 0 1rem #000000);
 }
 /*End global*/
 
