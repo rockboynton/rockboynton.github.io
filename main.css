@@ -42,8 +42,8 @@ p {
 
 img {
     width: 100%;
-    border: 3px solid #ffe838;
-    filter: drop-shadow(0 0 1rem #000000);
+    /* border: 3px solid #ffe838a9; */
+    filter: drop-shadow(20px 10px 4px #000000a9);
 }
 /*End global*/
 
@@ -298,8 +298,16 @@ li {
     margin-bottom: 0;
 }
 
-.portfolio-img {
+.portfolio-img-left {
     flex: 1.25;
+}
+
+.portfolio-img-right {
+    flex: 1.25;
+}
+
+.portfolio-img-right img{
+    filter: drop-shadow(-20px 10px 4px #000000a9);
 }
 
 .portfolio-description {
@@ -834,7 +842,7 @@ input[type="submit"]:hover {
         flex-direction: column;
     }
     
-    .portfolio-img {
+    .portfolio-img-right .portfolio-img-left {
         margin: 0 0 2rem 0;
         order: 1;
     }
