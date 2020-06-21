@@ -40,7 +40,7 @@ p {
     font-weight: 300;
 }
 
-img {
+img, video {
     width: 100%;
     /* border: 3px solid #ffe838a9; */
     filter: drop-shadow(20px 10px 4px #000000a9);
@@ -210,7 +210,7 @@ li {
     margin-right: 5rem;
 }
 
-.about img {
+.about img, video {
     height: 600px;
     object-fit: cover;
 }
